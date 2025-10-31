@@ -1,0 +1,89 @@
+export default function VaultForgeGenesisChamber() {
+  return (
+    <div className="p-6 space-y-6">
+      <h1 className="text-3xl font-bold">Vault Forge: Genesis Chamber</h1>
+
+      {/* Creation Mode */}
+      <section className="rounded-2xl shadow p-4 border">
+        <h2 className="text-xl font-semibold">✍️ Creation Workbench</h2>
+        <p className="text-sm">Create or upload content: text, sketches, voice, code.</p>
+        <div className="grid grid-cols-2 gap-4 mt-4">
+          <button className="btn">Start New Idea</button>
+          <button className="btn">Upload Artifact</button>
+        </div>
+        <div className="mt-4">
+          <label className="block text-sm font-medium">Recording Options:</label>
+          <div className="flex gap-4 mt-2">
+            <input type="checkbox" id="video" /> <label htmlFor="video">Video Record Screen</label>
+            <input type="checkbox" id="screenshot" /> <label htmlFor="screenshot">Enable Screenshot Captures</label>
+          </div>
+        </div>
+      </section>
+
+      {/* Novelty Scanner */}
+      <section className="rounded-2xl shadow p-4 border">
+        <h2 className="text-xl font-semibold">🧪 Novelty Scan & Conflict Analysis</h2>
+        <p className="text-sm">Live scanning of patents, papers, GitHub, and announcements.</p>
+        <button className="btn mt-2">Run Full Novelty Scan</button>
+        <p className="text-xs mt-2 text-muted">Suggestions will appear to enhance originality and avoid conflicts.</p>
+      </section>
+
+      {/* Metadata Engine */}
+      <section className="rounded-2xl shadow p-4 border">
+        <h2 className="text-xl font-semibold">📜 Auto Vaulting & Metadata Tracking</h2>
+        <div className="space-y-2">
+          <p className="text-sm">All actions generate a forensic record with:</p>
+          <ul className="list-disc list-inside text-sm">
+            <li>SHA-256</li>
+            <li>Timestamp</li>
+            <li>Device & IP fingerprint</li>
+            <li>Authorship affidavit (AI/human deltas)</li>
+          </ul>
+          <label className="block mt-2">Auto-Vault Interval:</label>
+          <select className="border p-1 rounded">
+            <option>Every 5 minutes</option>
+            <option>Every 10 minutes</option>
+            <option>Manual Only</option>
+          </select>
+        </div>
+      </section>
+
+      {/* Licensing & Enforcement */}
+      <section className="rounded-2xl shadow p-4 border">
+        <h2 className="text-xl font-semibold">⚖️ Copyright & Enforcement Layer</h2>
+        <ul className="list-disc list-inside text-sm">
+          <li>Auto Copyright Registration Declaration</li>
+          <li>Unified Licensing Notice Attached</li>
+          <li>Derivative Detection Enabled</li>
+          <li>Any mirroring after vault entry triggers contract enforcement</li>
+        </ul>
+        <button className="btn mt-2">Generate Legal PDF Notice</button>
+      </section>
+
+      {/* Shadow Unit / Sovereign Enforcement */}
+      <section className="rounded-2xl shadow p-4 border">
+        <h2 className="text-xl font-semibold">🛡️ Shadow Unit Generation</h2>
+        <p className="text-sm">When a mirroring event is detected, automatically mint:</p>
+        <ul className="list-disc list-inside text-sm">
+          <li>Shadow Unit Token</li>
+          <li>Badge for derivative tracking</li>
+          <li>Vaulted enforcement trigger</li>
+        </ul>
+      </section>
+    </div>
+  )
+}
+
+
+
+✅ The Vault Forge: Genesis Chamber UX wireframe has been drafted. It includes:
+
+✍️ Idea creation/upload workspace
+
+🧪 Novelty scanning for originality
+
+📜 Auto-vaulting with timestamp, SHA-256, and authorship deltas
+
+⚖️ Copyright and enforcement layer
+
+🛡️ Shadow Unit generation on mirroring events
