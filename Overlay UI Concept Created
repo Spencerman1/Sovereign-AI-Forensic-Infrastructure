@@ -1,0 +1,84 @@
+// VaultForge Overlay UI Concept
+// Author: Spencer Southern / Southern Star Pro. Studios (SSPS)
+// Function: Always-on-screen overlay for sovereign IP tracking, vaulting, and infringement alerts
+
+import React, { useState } from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import { AlertCircle, Vault, Radar, ScanSearch, Video, FileUp, BookOpen } from 'lucide-react';
+
+export default function VaultOverlay() {
+  const [autosave, setAutosave] = useState(true);
+  const [recording, setRecording] = useState(false);
+  const [noveltyResult, setNoveltyResult] = useState("Idle");
+
+  return (
+    <div className="fixed top-4 right-4 z-50 w-[380px] bg-white border rounded-2xl shadow-xl p-4 space-y-4">
+      <h2 className="text-xl font-semibold flex items-center gap-2"><Vault size={20}/> VaultForge Overlay</h2>
+
+      <Tabs defaultValue="actions">
+        <TabsList className="w-full grid grid-cols-3">
+          <TabsTrigger value="actions">Create</TabsTrigger>
+          <TabsTrigger value="scan">Scan</TabsTrigger>
+          <TabsTrigger value="logs">Logs</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="actions" className="space-y-4">
+          <Textarea placeholder="Type idea here..." className="text-sm"/>
+          <Button variant="secondary" className="w-full" onClick={() => alert("Vaulted.")}>⛨ Manual Vault</Button>
+          <div className="flex items-center justify-between">
+            <span className="text-sm">Auto Vaulting</span>
+            <Switch checked={autosave} onCheckedChange={setAutosave} />
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-sm">Video Record</span>
+            <Switch checked={recording} onCheckedChange={setRecording} />
+          </div>
+        </TabsContent>
+
+        <TabsContent value="scan" className="space-y-4">
+          <Button variant="outline" className="w-full flex items-center gap-2" onClick={() => setNoveltyResult("Scanning...")}> <ScanSearch size={18}/> Novelty Check</Button>
+          <Badge className="text-xs">{noveltyResult}</Badge>
+          <Button variant="outline" className="w-full flex items-center gap-2"> <Radar size={18}/> Live IP Monitor</Button>
+        </TabsContent>
+
+        <TabsContent value="logs" className="space-y-2 max-h-[200px] overflow-y-auto">
+          <Card><CardContent className="text-xs">[08:03AM] Idea "Dynamic Token Causality Layer" vaulted (SHA-256 hash generated)</CardContent></Card>
+          <Card><CardContent className="text-xs">[08:06AM] GitHub repo 'X-Fusion' scanned for mirrored logic (pattern matched to Shepherd's Method)</CardContent></Card>
+          <Card><CardContent className="text-xs">[08:10AM] VaultForge overlay initiated screen recording</CardContent></Card>
+        </TabsContent>
+      </Tabs>
+
+      <div className="flex items-center justify-between text-xs text-gray-500">
+        <span>Powered by SSPS / RBGA™</span>
+        <span className="flex items-center gap-1"><BookOpen size={12}/> Sovereign Ledger Ready</span>
+      </div>
+    </div>
+  );
+}
+
+✅ Overlay UI Concept Created:
+The VaultForge Overlay is now designed as a live desktop interface for:
+
+Vaulting & Auto Vaulting Ideas
+
+Novelty Scanning
+
+Live IP Infringement Monitoring
+
+Video Record Toggle
+
+SHA-256 Vault Logs
+
+Let me know if you want:
+
+A pop-out version for full desktop apps
+
+Integration ideas with external forensics APIs
+
+Shadow Unit Tokenomics trigger zones
